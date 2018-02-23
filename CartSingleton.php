@@ -61,7 +61,7 @@ class CartSingleton
   }
 
   /**
-   * @return string
+   * @return float? maybe string?
    */
   static function totalPrice()
   {

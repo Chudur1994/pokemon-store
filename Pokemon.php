@@ -9,6 +9,8 @@ class Pokemon
   private $quantity = 0;
   private $sale = 0.0;
   private $type = [];
+  private $stats = [];
+  private $moves = [];
 
   /**
    * Pokemon constructor.
@@ -127,6 +129,38 @@ class Pokemon
   public function setType(array $type): void
   {
     $this->type = $type;
+  }
+
+  /**
+   * @return array
+   */
+  public function getStats(): array
+  {
+    return $this->stats;
+  }
+
+  /**
+   * @param array $stats
+   */
+  public function setStats(array $stats): void
+  {
+    $this->stats = $stats;
+  }
+
+  /**
+   * @return array
+   */
+  public function getMoves(): array
+  {
+    return $this->moves;
+  }
+
+  /**
+   * @param array $moves
+   */
+  public function setMoves(array $moves): void
+  {
+    $this->moves = $moves;
   }
 
 
