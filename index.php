@@ -1,3 +1,16 @@
+<?php
+
+require_once "DB.php";
+require_once 'Pokemon.php';
+include_once 'data.php';
+
+$db = new DB();
+
+$query = "SELECT * FROM products WHERE sale IS NOT NULL";
+
+$onSaleItems = $db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Pokemon');
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -12,15 +25,15 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <title>Cart</title>
+  <title>Welcome</title>
 </head>
 
-<body>
+<body onload="showPage(1)">
 <div class="navbar-fixed">
   <nav class="grey darken-3">
     <div class="container">
       <div class="nav-wrapper">
-        <a href="index.php" class="brand-logo center">
+        <a href="#" class="brand-logo center">
           <div>
             <span class="white-text">Poke</span>
             <img src="./assets/img/Pokeball.PNG" alt="">
@@ -28,12 +41,12 @@
           </div>
         </a>
         <ul class="hide-on-med-and-down">
-          <li class="">
-            <a href="index.php">
-              <i class="left material-icons">home</i> Home</a>
-          </li>
           <li class="active">
             <a href="#">
+              <i class="left material-icons">home</i> Home</a>
+          </li>
+          <li>
+            <a href="cart.html">
               <i class="left material-icons">shopping_cart</i> Cart</a>
           </li>
         </ul>
@@ -48,125 +61,54 @@
   </nav>
 </div>
 
-<section class="section section-cart">
+<section class="section-sales">
   <div class="container">
     <div class="row">
-      <div class="col s12">
-        <h4>Your Cart</h4>
-        <div class="divider"></div>
-        <br>
+      <div class="sale red darken-1 center">
+        <h4 class="white-text">On Sale</h4>
       </div>
-      <div class="col s8">
-        <table class="bordered">
-          <thead>
-          <tr>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th></th>
-          </tr>
-          </thead>
-
-          <tbody>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Feraligatr.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Natu.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Gligar.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Heracross.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Scizor.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Togepi.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Charizard</td>
-            <td>
-              <img src="./assets/img/Gen_2/Kingdra.gif" alt="">
-            </td>
-            <td>99</td>
-            <td>$3.50</td>
-            <td width=5%>
-              <a href="" class="btn red">Remove</a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-        <h5 class="right-align">Total:
-          <b>$999.99</b>
-        </h5>
-      </div>
-      <div class="col s3 offset-s1 confirm">
-        <div>
-          <h5 class="center">Confirm</h5>
-          <div class="divider"></div>
-          <p>Tax:
-            <b>$9.99</b>
-          </p>
-          <p>Total Price:
-            <b>$999.99</b>
-          </p>
-          <div class="divider"></div>
-          <br>
-          <a href="" class="btn blue">Place Order</a>
+      <div class="col s12 m6">
+        <div class="carousel">
+          <?php
+          foreach ($onSaleItems as $item) {
+            echo "<a data-salePokemon='{$item->getName()}' class='carousel-item' href='#{$item->getName()}'>
+                    <img src='./assets/img/Gen_2/Pichu.gif'>
+                  </a>";
+          }
+          ?>
         </div>
       </div>
+      <div class="col s12 m6" id="sale-info">
+        <!-- SALE INFORMATION FOR A POKEMON GOES HERE -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-catalog grey lighten-4">
+  <div class="row">
+    <div class="col container s2 center">
+      <p style="font-size:1.5rem;">Filter By Type</p>
+      <div class="divider"></div>
+      <form id="filterList">
+        <?php
+        foreach (types as $type => $color) {
+          $style = "background-color:{$color};
+                    border-bottom: 2px solid rgba(100, 100, 100, .7);
+                    position: relative;
+                    bottom: 3px;";
+          echo "<p>
+                  <input class='type' onchange='filterType()' type='checkbox' id='{$type}'/>
+                  <label for='{$type}'>
+                    <span style='{$style}'>{$type}</span>
+                  </label>
+                </p>";
+        }
+        ?>
+      </form>
+    </div>
+    <div class="col s10" id="catalog">
+      <!--  CATALOG ITEMS GO HERE  -->
     </div>
   </div>
 </section>
@@ -235,9 +177,24 @@
     </div>
   </div>
 </footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="script.js"></script>
 <script>
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            onCycleTo: function (data) {
+                $.post('sale.php', {
+                    salePokemon: $(data).data('salepokemon')
+                }, function (info) {
+                    $('#sale-info').html(info);
+                });
+            }
+        });
+        $('ul.tabs').tabs();
+        $('.fixed-action-btn').floatingActionButton();
+    });
 </script>
 </body>
 

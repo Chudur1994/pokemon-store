@@ -18,45 +18,45 @@ $availablePokemons = [(object)['types' => ['grass', 'poison']],
                       (object)['types' => ['grass', 'poison']],
                       (object)['types' => ['bug', 'grass']]];
 
-$filteredPokemons = [];
+$filteredItems = [];
 
 /**
- * @param array $availablePokemons All pokemons in stock
- * @param array $filteredPokemons Current list of filtered pokemons
+ * @param array $availableItems All items in stock
+ * @param array $filteredItems Current list of filtered items
  * @param string $type Type to filter by
  */
-function filterType(array $availablePokemons, array &$filteredPokemons, string $type)
+function filterType(array $availableItems, array &$filteredItems, string $type)
 {
-  $newFiltered = array_filter($availablePokemons, function ($pokemon) use ($type) {
-    // if the type is found in the pokemon's array of types, return true
-    return in_array($type, $pokemon->types);
+  $newFiltered = array_filter($availableItems, function ($item) use ($type) {
+    // if the type is found in the item's array of types, return true
+    return in_array($type, $item->types);
   });
-  // find out why array_merge wasn't working but '+' worked
-  $filteredPokemons = $filteredPokemons + $newFiltered;
+  // find out why array_merge wasn't working while '+' worked
+  $filteredItems = $filteredItems + $newFiltered;
 }
 
 /**
- * @param array $filteredPokemons Current list of filtered pokemons
+ * @param array $filteredItems Current list of filtered items
  * @param string $type Type to unfilter by
  */
-function unfilterType(array &$filteredPokemons, string $type)
+function unfilterType(array &$filteredItems, string $type)
 {
-  // remove the pokemons from the filtered list that has the passed in type
-  $filteredPokemons = array_filter($filteredPokemons, function ($pokemon) use ($type) {
-    return !in_array($type, $pokemon->types);
+  // remove the items from the filtered list that has the passed in type
+  $filteredItems = array_filter($filteredItems, function ($item) use ($type) {
+    return !in_array($type, $item->types);
   });
 }
 
 /**
- * @param $pokemon Pokemon to add
+ * @param $item Item to add
  * @param $inventory Current inventory
  * @return bool True if successful, else false
  */
-function addToInventory($pokemon, &$inventory)
+function addToInventory($item, &$inventory)
 {
   // do some validation before adding...
   if (true) {
-    $inventory[$pokemon->getName()] = $pokemon;
+    $inventory[$item->getName()] = $item;
     return true;
   } else {
     return false;
@@ -64,15 +64,15 @@ function addToInventory($pokemon, &$inventory)
 }
 
 /**
- * @param $pokemon Pokemon to remove
+ * @param $item Item to remove
  * @param $inventory Current inventory
  * @return bool True if successfully removed, else false
  */
-function removeFromInventory($pokemon, &$inventory)
+function removeFromInventory($item, &$inventory)
 {
   // do some validation before removing...
   if (true) {
-    unset($inventory[$pokemon->getName()]);
+    unset($inventory[$item->getName()]);
     return true;
   } else {
     return false;
@@ -80,28 +80,27 @@ function removeFromInventory($pokemon, &$inventory)
 }
 
 /**
- * @param $pokemon Pokemon to update
+ * @param $item Item to update
  * @param $inventory Current inventory
  * @return bool True if successfully updated, else false
  */
-function updateInventory($pokemon, &$inventory)
+function updateInventory($item, &$inventory)
 {
   // do some validation before updating...
   if (true) {
-    $inventory[$pokemon->getName()] = $pokemon;
+    $inventory[$item->getName()] = $item;
   } else {
     return false;
   }
 }
-
 
 // used for debugging filtering functions
 function debugTable(array $data)
 {
   echo "<table>";
-  foreach ($data as $pokemon) {
+  foreach ($data as $item) {
     echo "<tr>";
-    foreach ($pokemon->types as $type) {
+    foreach ($item->types as $type) {
       echo "<td>{$type}</td>";
     }
     echo "</tr>";

@@ -87,9 +87,8 @@ nav {
 }
 
 footer {
-    background-repeat: no-repeat;
     background-origin: content-box;
-    background-position: center top;
+    background: no-repeat center top;
 }
 
 .footer-copyright {
@@ -99,4 +98,9 @@ footer {
 .input-field .dropdown-content [type="checkbox"] + label {
     top: -0.2em !important;
     display: inline;
+}
+
+.sale-info {
+    display: inline-block;
+    height: 15rem !important;
 }

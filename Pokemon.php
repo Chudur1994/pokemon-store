@@ -1,23 +1,14 @@
 <?php
 
-class Pokemon
+require_once "Item.php";
+
+class Pokemon extends Item
 {
   private $name = "";
-  private $image = "";
-  private $desc = "";
-  private $price = 0.0;
-  private $quantity = 0;
-  private $sale = 0.0;
+  private $description = "";
   private $type = [];
   private $stats = [];
   private $moves = [];
-
-  /**
-   * Pokemon constructor.
-   */
-  public function __construct()
-  {
-  }
 
   /**
    * @return string
@@ -38,81 +29,17 @@ class Pokemon
   /**
    * @return string
    */
-  public function getImage(): string
+  public function getDescription(): string
   {
-    return $this->image;
+    return $this->description;
   }
 
   /**
-   * @param string $image
+   * @param string $description
    */
-  public function setImage(string $image): void
+  public function setDescription(string $description): void
   {
-    $this->image = $image;
-  }
-
-  /**
-   * @return string
-   */
-  public function getDesc(): string
-  {
-    return $this->desc;
-  }
-
-  /**
-   * @param string $desc
-   */
-  public function setDesc(string $desc): void
-  {
-    $this->desc = $desc;
-  }
-
-  /**
-   * @return float
-   */
-  public function getPrice(): float
-  {
-    return $this->price;
-  }
-
-  /**
-   * @param float $price
-   */
-  public function setPrice(float $price): void
-  {
-    $this->price = $price;
-  }
-
-  /**
-   * @return int
-   */
-  public function getQuantity(): int
-  {
-    return $this->quantity;
-  }
-
-  /**
-   * @param int $quantity
-   */
-  public function setQuantity(int $quantity): void
-  {
-    $this->quantity = $quantity;
-  }
-
-  /**
-   * @return float
-   */
-  public function getSale(): float
-  {
-    return $this->sale;
-  }
-
-  /**
-   * @param float $sale
-   */
-  public function setSale(float $sale): void
-  {
-    $this->sale = $sale;
+    $this->description = $description;
   }
 
   /**
