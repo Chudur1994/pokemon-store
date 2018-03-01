@@ -37,9 +37,9 @@ class Paginator
     if (empty($types)) {
       $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
 
-      $this->query = "SELECT * FROM products LIMIT {$startingLimit}, {$this->itemsPerPage}";
+      $this->query = "SELECT * FROM products WHERE sale IS NULL LIMIT {$startingLimit}, {$this->itemsPerPage}";
     } else {
-      $startingLimit = 0;
+      $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
 
       $this->query = "SELECT products.*
                     FROM products 
@@ -49,7 +49,7 @@ class Paginator
 
       for ($i = 0; $i < count($types); $i++) {
         if ($i + 1 == count($types)) {
-          $this->query .= "product_type.type='{$types[$i]}' ";
+          $this->query .= "product_type.type='{$types[$i]}' AND (sale IS NULL) ";
         } else {
           $this->query .= "product_type.type='{$types[$i]}' AND ";
         }
@@ -59,7 +59,8 @@ class Paginator
     }
 
     try {
-      return $results = $this->db->query($this->query)->fetchAll(PDO::FETCH_CLASS, 'Pokemon');
+      $results = $this->db->query($this->query)->fetchAll(PDO::FETCH_CLASS, 'Pokemon');
+      return $results;
     } catch (PDOException $e) {
       echo $e->getMessage();
       die();

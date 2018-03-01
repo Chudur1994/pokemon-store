@@ -15,12 +15,8 @@ $query;
 $filteredTypes = [];
 
 if (!isset($_POST['types']) && empty($_POST['types'])) {
-  if (!isset($_POST['page'])) {
-    $currentPage = 1;
-  } else {
-    $currentPage = $_POST['page'];
-  }
-  $query = "SELECT COUNT(*) FROM products";
+  $currentPage = $_POST['page'];
+  $query = "SELECT COUNT(*) FROM products WHERE sale IS NULL";
 } else {
   $filteredTypes = $_POST['types'];
   if (!isset($_POST['page'])) {
@@ -35,7 +31,7 @@ if (!isset($_POST['types']) && empty($_POST['types'])) {
             WHERE ";
   for ($i = 0; $i < count($filteredTypes); $i++) {
     if ($i + 1 == count($filteredTypes)) {
-      $query .= "product_type.type='{$filteredTypes[$i]}'";
+      $query .= "product_type.type='{$filteredTypes[$i]}' AND sale IS NULL";
     } else {
       $query .= "product_type.type='{$filteredTypes[$i]}' AND ";
     }
@@ -44,42 +40,49 @@ if (!isset($_POST['types']) && empty($_POST['types'])) {
 
 $paginator = new Paginator($db, $query, $itemsPerPage);
 $catalogItems = $paginator->getResults($currentPage, $filteredTypes);
+
 if (!empty($catalogItems)) {
   $output = '<div class="row">
             <div class="col s12 right-align">';
 
-  for ($i = 0; $i < count($filteredTypes); $i++) {
-    $bgColor = "background-color: " . types[$filteredTypes[$i]];
-    $output .= "<div style='$bgColor;' class='chip white-text'>
+  if (empty($filteredTypes)) {
+    $output .= "<div style='visibility: hidden;' class='chip white-text'>
+                  Coffee...
+                </div>";
+  } else {
+    for ($i = 0; $i < count($filteredTypes); $i++) {
+      $bgColor = "background-color: " . types[$filteredTypes[$i]];
+      $output .= "<div style='$bgColor;' class='chip white-text'>
                   $filteredTypes[$i]
                 </div>";
+    }
   }
 
   $output .= "</div>";
 
   foreach ($catalogItems as $item) {
-    $output .= '<div class="col s3 left-align">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="./assets/img/Gen_2/Pichu.gif">
+    $output .= "<div class='col s3 left-align'>
+                <div class='card sticky-action'>
+                  <div class='card-image waves-effect waves-block waves-light'>
+                    <img class='activator' src='./assets/img/gen1/{$item->getImage()}'>
                   </div>
-                  <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">' . $item->getName() .
-      '<i class="material-icons right">more_vert</i>
+                  <div class='card-content'>
+                      <span class='card-title activator grey-text text-darken-4'>{$item->getName()}
+      <i class='material-icons right'>more_vert</i>
                       </span>
                   </div>
-                  <div class="card-action">
-                    <a class="btn green waves-effect waves-light">
-                      <i class="left material-icons">shopping_cart</i>Add</a>
+                  <div class='card-action'>
+                    <a class='btn green waves-effect waves-light add-to-cart'>
+                      <i class='left material-icons'>shopping_cart</i>Add</a>
                   </div>
-                  <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">' . $item->getName() .
-      '<i class="material-icons right">close</i>
+                  <div class='card-reveal'>
+                      <span class='card-title grey-text text-darken-4'>{$item->getName()}
+      <i class='material-icons right'>close</i>
                       </span>
-                    <p>' . $item->getDescription() . '</p>
+                    <p>{$item->getDescription()}</p>
                   </div>
                 </div>
-              </div>';
+              </div>";
   }
 
   $output .= '</div>

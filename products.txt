@@ -1,0 +1,1359 @@
+INSERT INTO products
+VALUES(
+    'Dragonite',
+    "It is said that this pokemon constantly flies over the immense seas and rescues drowning people.",
+    '39.99',
+    '25',
+    'Dragonite.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Dragonair',
+    "They say that if it emits an aura from its whole body, the weather will begin to change instantly.",
+    '59.99',
+    '15',
+    'Dragonair.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Snorlax',
+    "What sounds like its cry may actually be its snores or the rumblings of its hungry belly.",
+    '59.99',
+    '15',
+    'Snorlax.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Kabutops',
+    "In the water, it tucks in its limbs to become more compact, then it wiggles its shell to swim fast.",
+    '49.99',
+    '20',
+    'Kabutops.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Omastar',
+    "Apparently, it cracked SHELLDER's shell with its sharp fangs and sucked out the insides.",
+    '24.99',
+    '10',
+    'Omastar.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Flareon',
+    "It stores some of the air it inhales in its internal flame pouch, which heats it to over 3,000 degrees.",
+    '69.99',
+    '20',
+    'Flareon.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Jolteon',
+    "It concentrates the weak electric charges emitted by its cells and launches wicked lightning bolts.",
+    '39.99',
+    '25',
+    'Jolteon.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Vaporeon',
+    "When VAPOREON's fins begin to vibrate, it is a sign that rain will come within a few hours.",
+    '49.99',
+    '10',
+    'Vaporeon.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Gyarados',
+    "They say that during past wars, GYARADOS would appear and leave blazing ruins in its wake.",
+    '59.99',
+    '5',
+    'Gyarados.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Magmar',
+    "It dislikes cold places, so it blows scorching flames to make the environment suitable for itself.",
+    '39.99',
+    '25',
+    'Magmar.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Electabuzz',
+    "Electricity runs across the surface of its body. In darkness, its entire body glows a whitish-blue.",
+    '75.99',
+    '15',
+    'Electabuzz.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Jynx',
+    "It rocks its body rhythmically. It appears to alter the rhythm depending on how it is feeling.",
+    '69.99',
+    '20',
+    'Jynx.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Mr-mime',
+    "A skilled mime from birth, it gains the ability to create invisible objects as it matures.",
+    39.99,
+    '5',
+    'Mr-mime.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Starmie',
+    "The center section of its body is called the core. It glows in a different color each time it is seen.",
+    '24.99',
+    '15',
+    'Starmie.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Seaking',
+    "During spawning season, SEAKING gather from all over, coloring the rivers a brilliant red.",
+    '39.99',
+    '20',
+    'Seaking.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Seadra',
+    "An examination of its cells revealed the presence of a gene not found in HORSEA. It became a hot topic.",
+    '24.99',
+    '10',
+    'Seadra.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Chansey',
+    "It walks carefully to prevent its egg from breaking. However, it is extremely fast at running away.",
+    '39.99',
+    '25',
+    'Chansey.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Rhydon',
+    "Its rugged hide protects it from even the heat of lava. However, the hide also makes it insensitive.",
+    '75.99',
+    '15',
+    'Rhydon.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Weezing',
+    "If one of the twin KOFFING inflates, the other one deflates. It constantly mixes its poisonous gases.",
+    '75.99',
+    '15',
+    'Weezing.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Hitmonchan',
+    "Its punches slice the air. However, it seems to need a short break after fighting for three minutes.",
+    '59.99',
+    '20',
+    'Hitmonchan.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Hitmonlee',
+    "This amazing pokemon has an awesome sense of balance. It can kick in succession from any position.",
+    '24.99',
+    '25',
+    'Hitmonlee.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Marowak',
+    "It has been seen pounding boulders with the bone it carries in order to tap out messages to others.",
+    '75.99',
+    '5',
+    'Marowak.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Exeggutor',
+    "Its three heads think independently. However, they are friendly and never appear to squabble.",
+    '59.99',
+    '15',
+    'Exeggutor.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Electrode',
+    "It is dangerous. If it has too much electricity and has nothing to do, it amuses itself by exploding.",
+    '39.99',
+    '10',
+    'Electrode.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Kingler',
+    "It can hardly lift its massive, overgrown pincer. The pincer's size makes it difficult to aim properly.",
+    '69.99',
+    '10',
+    'Kingler.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Hypno',
+    "When it is very hungry, it puts humans it meets to sleep, then it feasts on their dreams.",
+    '49.99',
+    '5',
+    'Hypno.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Gengar',
+    "It steals heat from its surroundings. If you feel a sudden chill, it is certain that a GENGAR appeared.",
+    '49.99',
+    '10',
+    'Gengar.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Haunter',
+    "In total darkness, where nothing is visible, HAUNTER lurks, silently stalking its next victim.",
+    '59.99',
+    '5',
+    'Haunter.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Cloyster',
+    "Once it slams its shell shut, it is impossible to open, even by those with superior strength.",
+    '49.99',
+    '10',
+    'Cloyster.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Muk',
+    "They love to gather in smelly areas where sludge accumulates, making the stench around them worse.",
+    '49.99',
+    '5',
+    'Muk.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Dewgong',
+    "Its streamlined body has little drag in water. The colder the temperature, the friskier it gets.",
+    '99.99',
+    '25',
+    'Dewgong.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Dodrio',
+    "It collects data and plans three times as wisely, but it may think too much and become immobilized.",
+    '39.99',
+    '20',
+    'Dodrio.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Magneton',
+    "Three MAGNEMITE are linked by a strong magnetic force. Earaches will occur if you get too close.",
+    '69.99',
+    '25',
+    'Magneton.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Slowbro',
+    "If the tail-biting SHELLDER is thrown off in a harsh battle, it reverts to being an ordinary SLOWPOKE.",
+    '99.99',
+    '20',
+    'Slowbro.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Rapidash',
+    "At full gallop, its four hooves barely touch the ground because it moves so incredibly fast.",
+    '39.99',
+    '5',
+    'Rapidash.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Golem',
+    "It sheds its skin once a year. The discarded shell immediately hardens and crumbles away.",
+    '75.99',
+    '10',
+    'Golem.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Tentacruel',
+    "Its 80 tentacles absorb water and stretch almost endlessly to CONSTRICT its prey and enemies.",
+    '49.99',
+    '15',
+    'Tentacruel.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Victreebel',
+    "ACID that has dissolved many prey becomes sweeter, making it even more effective at attracting prey.",
+    '59.99',
+    '5',
+    'Victreebel.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Weepinbell',
+    "Even though it is filled with ACID, it does not melt because it also oozes a neutralizing fluid.",
+    '59.99',
+    '25',
+    'Weepinbell.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Graveler',
+    "With a free and uncaring nature, it doesn't mind if pieces break off while it rolls down mountains.",
+    '99.99',
+    '20',
+    'Graveler.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Machamp',
+    "It quickly swings its four arms to rock its opponents with ceaseless punches and chops from all angles.",
+    '69.99',
+    '10',
+    'Machamp.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Machoke',
+    "It always goes at its full power, but this very tough and durable pokemon never gets tired.",
+    '39.99',
+    '20',
+    'Machoke.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Kadabra',
+    "It possesses strong spiritual power. The more danger it faces, the stronger its psychic power.",
+    '49.99',
+    '15',
+    'Kadabra.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Arcanine',
+    "This legendary Chinese POKEMON is considered magnificent. Many people are enchanted by its grand mane.",
+    '75.99',
+    '10',
+    'Arcanine.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Primeape',
+    "If approached while asleep, it may awaken and angrily give chase in a groggy state of semi-sleep.",
+    '69.99',
+    '15',
+    'Primeape.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Golduck',
+    "When it swims at full speed using its long, webbed limbs, its forehead somehow begins to glow.",
+    '69.99',
+    '20',
+    'Golduck.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Venomoth',
+    "When it attacks, it flaps its large wings violently to scatter its poisonous powder all around.",
+    '69.99',
+    '20',
+    'Venomoth.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Vileplume',
+    "It has the world's largest petals. With every step, the petals shake out heavy clouds of toxic pollen.",
+    '49.99',
+    '20',
+    'Vileplume.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Ninetales',
+    "Some legends claim that each of its nine tails has its own unique type of special mystical power.",
+    '24.99',
+    '20',
+    'Ninetales.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Alakazam',
+    "Closing both its eyes heightens all its other senses. This enables it to use its abilities to their extremes.",
+    '49.99',
+    '10',
+    'Alakazam.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Poliwrath',
+    "This strong and skilled swimmer is even capable of crossing the Pacific Ocean just by kicking.",
+    '49.99',
+    '15',
+    'Poliwrath.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Poliwhirl',
+    "The swirl on its belly subtly undulates. Staring at it may gradually cause drowsiness.",
+    '69.99',
+    '10',
+    'Poliwhirl.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Dugtrio',
+    "Its three heads bob separately up and down to loosen the soil nearby, making it easier for it to burrow.",
+    '39.99',
+    '10',
+    'Dugtrio.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Persian',
+    "Many adore it for its sophisticated air. However, it will lash out and scratch for little reason.",
+    '69.99',
+    '10',
+    'Persian.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Gloom',
+    "What appears to be drool is actually sweet honey. It is very sticky and clings stubbornly if touched.",
+    '39.99',
+    '15',
+    'Gloom.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Parasect',
+    "It stays mostly in dark, damp places, the preference not of the bug, but of the big mushrooms on its back.",
+    '49.99',
+    '25',
+    'Parasect.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Golbat',
+    "However hard its victim's hide may be, it punctures with sharp fangs and gorges itself with blood.",
+    '59.99',
+    '5',
+    'Golbat.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Jigglypuff',
+    "If it inflates to SING a lullaby, it can perform longer and cause sure drowsiness in its audience.",
+    '69.99',
+    '20',
+    'Jigglypuff.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Clefable',
+    "With its acute hearing, it can pick up sounds from far away. It usually hides in quiet places.",
+    '99.99',
+    '15',
+    'Clefable.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Wigglytuff',
+    "Their fur feels so good that if two of them snuggle together, they won't want to be separated.",
+    '75.99',
+    '10',
+    'Wigglytuff.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Clefairy',
+    "The moonlight that it stores in the wings on its back apparently gives it the ability to float in midair.",
+    '24.99',
+    '15',
+    'Clefairy.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Nidoking',
+    "It swings its big tail around during battle. If its foe flinches, it will charge with its sturdy body.",
+    '69.99',
+    '20',
+    'Nidoking.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Nidorino',
+    "It raises its big ears to check its surroundings. If it senses anything, it attacks immediately.",
+    '99.99',
+    '10',
+    'Nidorino.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Nidoqueen',
+    "Its body is covered with needle- like scales. It never shows signs of shrinking from any attack.",
+    '24.99',
+    '5',
+    'Nidoqueen.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Nidorina',
+    "When feeding its young, it first chews and tenderizes the food, then spits it out for the offspring.",
+    '24.99',
+    '10',
+    'Nidorina.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Sandslash',
+    "In an attempt to hide itself, it will run around at top speed to kick up a blinding dust storm.",
+    '99.99',
+    '25',
+    'Sandslash.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Raichu',
+    "When its electricity builds, its muscles are stimulated, and it becomes more aggressive than usual.",
+    '99.99',
+    '25',
+    'Raichu.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Pikachu',
+    "This intelligent pokemon roasts hard BERRIES with electricity to make them tender enough to eat.",
+    '69.99',
+    '20',
+    'Pikachu.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Arbok',
+    "Transfixing prey with the face-like pattern on its belly, it binds and poisons the frightened victim.",
+    '69.99',
+    '10',
+    'Arbok.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Fearow',
+    "It shoots itself suddenly high into the sky, then plummets down in one fell swoop to strike its prey.",
+    '69.99',
+    '25',
+    'Fearow.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Raticate',
+    "Gnaws on anything with its tough fangs. It can even topple concrete buildings by gnawing on them.",
+    '99.99',
+    '10',
+    'Raticate.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Pidgeot',
+    "Its well-developed chest muscles make it strong enough to whip up a gusty windstorm with just a few flaps.",
+    '59.99',
+    '15',
+    'Pidgeot.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Pidgeotto',
+    "It has outstanding vision. However high it flies, it is able to distinguish the movements of its prey.",
+    '59.99',
+    '25',
+    'Pidgeotto.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Beedrill',
+    "It can take down any opponent with its powerful poison stingers. It sometimes attacks in swarms.",
+    '59.99',
+    '10',
+    'Beedrill.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Kakuna',
+    "Although it is a cocoon, it can move a little. It can extend its poison barb if it is attacked.",
+    '39.99',
+    '20',
+    'Kakuna.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Butterfree',
+    "It collects honey every day. It rubs honey onto the hairs on its legs to carry it back to its nest.",
+    '69.99',
+    '10',
+    'Butterfree.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Metapod',
+    "Inside the shell, it is soft and weak as it prepares to evolve. It stays motionless in the shell.",
+    '49.99',
+    '25',
+    'Metapod.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Blastoise',
+    "It deliberately makes itself heavy so it can withstand the recoil of the water jets it fires.",
+    '75.99',
+    '5',
+    'Blastoise.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Wartortle',
+    "It is recognized as a symbol of longevity. If its shell has algae on it, that WARTORTLE is very old.",
+    '24.99',
+    '5',
+    'Wartortle.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Charizard',
+    "If CHARIZARD becomes furious, the flame at the tip of its tail flares up in a whitish- blue color.",
+    '49.99',
+    '10',
+    'Charizard.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Charmeleon',
+    "It is very hotheaded by nature, so it constantly seeks opponents. It calms down only when it wins.",
+    '49.99',
+    '10',
+    'Charmeleon.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Venusaur',
+    "By spreading the broad petals of its flower and catching the sun's rays, it fills its body with power.",
+    '49.99',
+    '5',
+    'Venusaur.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Ivysaur',
+    "Exposure to sunlight adds to its strength. Sunlight also makes the bud on its back grow larger.",
+    '39.99',
+    '20',
+    'Ivysaur.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Mew',
+    "Apparently, it appears only to those people who are pure of heart and have a strong desire to see it.",
+    '69.99',
+    '15',
+    'Mew.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Mewtwo',
+    "Because its battle abilities were raised to the ultimate level, it thinks only of defeating its foes.",
+    '49.99',
+    '10',
+    'Mewtwo.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Dratini',
+    "It is born large to start with. It repeatedly sheds its skin as it steadily grows longer.",
+    '59.99',
+    '20',
+    'Dratini.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Moltres',
+    "This legendary pokemon scatters embers with every flap of its wings. It is a thrilling sight to behold.",
+    '99.99',
+    '5',
+    'Moltres.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Zapdos',
+    "This legendary bird pokemon causes savage thunderstorms by flapping its glittering wings.",
+    '39.99',
+    '15',
+    'Zapdos.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Articuno',
+    "The magnificent, seemingly translucent wings of this legendary bird pokemon are said to be made of ice.",
+    '69.99',
+    '5',
+    'Articuno.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Aerodactyl',
+    "A vicious pokemon from the distant past, it appears to have flown by spreading its wings and gliding.",
+    '99.99',
+    '25',
+    'Aerodactyl.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Kabuto',
+    "On rare occasions, some have been found as fossils which they became while hiding on the ocean floor.",
+    '75.99',
+    '15',
+    'Kabuto.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Omanyte',
+    "Revived from an ancient fossil, this pokemon uses air stored in its shell to sink and rise in water.",
+    '49.99',
+    '10',
+    'Omanyte.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Porygon',
+    "It is a manmade pokemon. Since it doesn't breathe, people are eager to try it in any environment.",
+    '24.99',
+    '15',
+    'Porygon.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Eevee',
+    "It has the ability to alter the composition of its body to suit its surrounding environment.",
+    '75.99',
+    '25',
+    'Eevee.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Ditto',
+    "It can transform into anything. When it sleeps, it changes into a stone to avoid being attacked.",
+    '49.99',
+    '15',
+    'Ditto.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Magikarp',
+    "An underpowered, pathetic pokemon. It may jump high on rare occasions, but never more than seven feet.",
+    '24.99',
+    '5',
+    'Magikarp.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Lapras',
+    "They have gentle hearts. Because they rarely fight, many have been caught. Their number has dwindled.",
+    '49.99',
+    '10',
+    'Lapras.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Pinsir',
+    "With its horns, it digs burrows to sleep in at night. In the morning, damp soil clings to its body.",
+    '69.99',
+    '20',
+    'Pinsir.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Tauros',
+    "They fight each other by locking horns. The herd's protector takes pride in its battle-scarred horns.",
+    '24.99',
+    '5',
+    'Tauros.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Scyther',
+    "It slashes through grass with its sharp scythes, moving too fast for the human eye to track.",
+    '39.99',
+    '20',
+    'Scyther.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Staryu',
+    "At night, the center of its body slowly flickers with the same rhythm as a human heartbeat.",
+    '39.99',
+    '5',
+    'Staryu.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Goldeen',
+    "Its dorsal, pectoral and tail fins wave elegantly in water. That is why it is known as the water dancer.",
+    '49.99',
+    '5',
+    'Goldeen.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Horsea',
+    "If attacked by a larger enemy, it quickly swims to safety by adeptly controlling its dorsal fin.",
+    '75.99',
+    '10',
+    'Horsea.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Kangaskhan',
+    "If it is safe, the young gets out of the belly pouch to play. The adult keeps a close eye on the youngster.",
+    '69.99',
+    '25',
+    'Kangaskhan.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Tangela',
+    "The vines that cloak its entire body are always jiggling. They effectively unnerve its foes.",
+    '24.99',
+    '25',
+    'Tangela.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Rhyhorn',
+    "It is inept at turning because of its four short legs. It can only charge and run in one direction.",
+    '99.99',
+    '20',
+    'Rhyhorn.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Koffing',
+    "Its thin, filmy body is filled with gases that cause constant sniffles, coughs and teary eyes.",
+    '39.99',
+    '15',
+    'Koffing.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Lickitung',
+    "Its tongue has well-developed nerves that run to the very tip, so it can be deftly manipulated.",
+    '49.99',
+    '5',
+    'Lickitung.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Cubone',
+    "If it is sad or lonely, the skull it wears shakes, and emits a plaintive and mournful sound.",
+    '69.99',
+    '20',
+    'Cubone.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Exeggcute',
+    "The shell is very durable. Even if it cracks, it can survive without spilling the contents.",
+    '24.99',
+    '20',
+    'Exeggcute.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Voltorb',
+    "It rolls to move. If the ground is uneven, a sudden jolt from hitting a bump can cause it to explode.",
+    '75.99',
+    '15',
+    'Voltorb.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Krabby',
+    "If it senses danger approaching, it cloaks itself with bubbles from its mouth so it will look bigger.",
+    '59.99',
+    '5',
+    'Krabby.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Drowzee',
+    "If you think that you had a good dream, but you can't remember it, a DROWZEE has probably eaten it.",
+    '49.99',
+    '5',
+    'Drowzee.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Gastly',
+    "With its gas-like body, it can sneak into any place it desires. However, it can be blown away by wind.",
+    '75.99',
+    '15',
+    'Gastly.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Onix',
+    "It twists and squirms through the ground. The thunderous roar of its tunneling echoes a long way.",
+    '39.99',
+    '5',
+    'Onix.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Grimer',
+    "As it moves, it loses bits of its body from which new GRIMER emerge. This worsens the stench around it.",
+    '49.99',
+    '25',
+    'Grimer.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Shellder',
+    "It swims facing backward by opening and closing its two-piece shell. It is surprisingly fast.",
+    '69.99',
+    '20',
+    'Shellder.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Seel',
+    "Although it can't walk well on land, it is a graceful swimmer. It especially loves being in frigid seas.",
+    '99.99',
+    '10',
+    'Seel.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Doduo',
+    "By alternately raising and lowering its two heads, it balances itself to be more stable while running.",
+    '49.99',
+    '25',
+    'Doduo.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Farfetchd',
+    "If anyone tries to disturb where the essential plant sticks grow, it uses its own stick to thwart them.",
+    '69.99',
+    '10',
+    'Farfetchd.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Magnemite',
+    "It is attracted by electromagnetic waves. It may approach trainers if they are using their POKéGEAR.",
+    '69.99',
+    '20',
+    'Magnemite.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Slowpoke',
+    "It lazes vacantly near water. If something bites its tail, it won't even notice for a whole day.",
+    '75.99',
+    '20',
+    'Slowpoke.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Ponyta',
+    "It is a weak runner immediately after birth. It gradually becomes faster by chasing after its parents.",
+    '24.99',
+    '10',
+    'Ponyta.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Geodude',
+    "Most people may not notice, but a closer look should reveal that there are many GEODUDE around.",
+    '49.99',
+    '20',
+    'Geodude.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Tentacool',
+    "When the tide goes out, dehydrated TENTACOOL remains can be found washed up on the shore.",
+    '99.99',
+    '25',
+    'Tentacool.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Bellsprout',
+    "Even though its body is extremely skinny, it is blindingly fast when catching its prey.",
+    '24.99',
+    '10',
+    'Bellsprout.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Machop',
+    "Always brimming with power, it passes time by lifting boulders. Doing so makes it even stronger.",
+    '75.99',
+    '5',
+    'Machop.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Abra',
+    "It senses impending attacks and TELEPORTS away to safety before the actual attacks can strike.",
+    '24.99',
+    '5',
+    'Abra.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Poliwag',
+    "Because it is inept at walking on its newly grown legs, it always swims around in water.",
+    '75.99',
+    '15',
+    'Poliwag.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Growlithe',
+    "It has a brave and trustworthy nature. It fearlessly stands up to bigger and stronger foes.",
+    '69.99',
+    '10',
+    'Growlithe.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Mankey',
+    "It is extremely ill-tempered. Groups of them will attack any handy target for no reason.",
+    '39.99',
+    '20',
+    'Mankey.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Psyduck',
+    "It has mystical powers but doesn't recall that it has used them. That is why it always looks puzzled.",
+    '24.99',
+    '10',
+    'Psyduck.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Meowth',
+    "It is fascinated by round objects. It can't stop playing with them until it tires and falls asleep.",
+    '24.99',
+    '10',
+    'Meowth.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Venonat',
+    "Its eyes also function as radar units. It catches and eats small bugs that hide in darkness.",
+    '39.99',
+    '10',
+    'Venonat.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Oddish',
+    "Awakened by moonlight, it roams actively at night. In the day, it stays quietly underground.",
+    '69.99',
+    '25',
+    'Oddish.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Zubat',
+    "While flying, it constantly emits ultrasonic waves from its mouth to check its surroundings.",
+    '39.99',
+    '10',
+    'Zubat.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Diglett',
+    "Its skin is very thin. If it is exposed to light, its blood heats up, causing it to grow weak.",
+    '75.99',
+    '5',
+    'Diglett.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Paras',
+    "It is doused with mushroom spores when it is born. As its body grows, mushrooms sprout from its back.",
+    '75.99',
+    '15',
+    'Paras.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Nidoran-m',
+    "It is small, but its horn is filled with poison. It charges then stabs with the horn to inject poison.",
+    39.99,
+    '20',
+    'Nidoran-m.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Vulpix',
+    "As it develops, its single white tail gains color and splits into six. It is quite warm and cuddly.",
+    '69.99',
+    '25',
+    'Vulpix.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Nidoran-f',
+    "The poison hidden in its small horn is extremely potent. Even a tiny scratch can have fatal results.",
+    39.99,
+    '5',
+    'Nidoran-f.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Sandshrew',
+    "If it fell from a great height, this pokemon could save itself by rolling into a ball and bouncing.",
+    '24.99',
+    '20',
+    'Sandshrew.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Ekans',
+    "It can freely detach its jaw to swallow large prey whole. It can become too heavy to move, however.",
+    '59.99',
+    '10',
+    'Ekans.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Spearow',
+    "It flaps its short wings to flush out insects from tall grass. It then plucks them with its stubby beak.",
+    '39.99',
+    '25',
+    'Spearow.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Rattata',
+    "It eats anything. Wherever food is available, it will settle down and produce offspring continuously.",
+    '24.99',
+    '10',
+    'Rattata.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Pidgey',
+    "It usually hides in tall grass. Because it dislikes fighting, it protects itself by kicking up sand.",
+    '24.99',
+    '25',
+    'Pidgey.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Weedle',
+    "Its poison stinger is very powerful. Its bright-colored body is intended to warn off its enemies.",
+    '99.99',
+    '10',
+    'Weedle.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Caterpie',
+    "For protection, it releases a horrible stench from the antenna on its head to drive away enemies.",
+    '75.99',
+    '10',
+    'Caterpie.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Squirtle',
+    "The shell is soft when it is born. It soon becomes so resilient, prodding fingers will bounce off it.",
+    '75.99',
+    '25',
+    'Squirtle.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Charmander',
+    "The flame on its tail shows the strength of its life force. If it is weak, the flame also burns weakly.",
+    '49.99',
+    '10',
+    'Charmander.gif',
+    NULL
+);
+INSERT INTO products
+VALUES(
+    'Bulbasaur',
+    "The seed on its back is filled with nutrients. The seed grows steadily larger as its body grows.",
+    '59.99',
+    '20',
+    'Bulbasaur.gif',
+    NULL
+);

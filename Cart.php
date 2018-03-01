@@ -120,4 +120,8 @@ class Cart
 
     session_destroy(); // is this the right place to destroy session?
   }
+
+  function getTax() {
+    return self::TAX * 100;
+  }
 }

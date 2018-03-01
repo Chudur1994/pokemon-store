@@ -1,11 +1,30 @@
+var catalogPreloader = $('.catalog-preloader');
+
 function showPage(page, types) {
-    $.post('catalog.php', {
-        page: page,
-        types: types
-    }, function (data) {
-        $('#catalog').html(data);
+    $.ajax({
+        type: 'POST',
+        url: 'catalog.php',
+        data: {
+            page: page,
+            types: types
+        },
+        success: function (data) {
+            $('#catalog').html(data);
+        },
+        beforeSend: function () {
+            console.log('hello');
+            $(catalogPreloader).show();
+        },
+        complete: function () {
+            $(catalogPreloader).hide();
+        }
     });
 }
+
+$(document).on('click', '.add-to-cart', function (e) {
+    e.preventDefault();
+    Materialize.toast('Add To Cart', 1000, 'blue')
+});
 
 $(document).on('click', '.pagination_link', function (e) {
     e.preventDefault();
