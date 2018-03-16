@@ -30,10 +30,29 @@ class Paginator
 
   /**
    * @param int $currentPage
+   * @return array
+   */
+  public function getInventoryItems(int $currentPage)
+  {
+    $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
+    $this->query = "SELECT products.*, GROUP_CONCAT(product_type.type) AS type FROM products 
+                    JOIN product_type USING(name) 
+                    GROUP BY name LIMIT {$startingLimit}, {$this->itemsPerPage}";
+    try {
+      $results = $this->pdo->query($this->query)->fetchAll(PDO::FETCH_CLASS, 'Pokemon');
+      return $results;
+    } catch (PDOException $e) {
+      echo $e->getMessage();
+      die();
+    }
+  }
+
+  /**
+   * @param int $currentPage
    * @param array $types
    * @return array
    */
-  public function getResults(int $currentPage, array $types = [])
+  public function getCatalogItems(int $currentPage, array $types = [])
   {
     $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
 
@@ -41,11 +60,11 @@ class Paginator
       $this->query = "SELECT * FROM products WHERE sale IS NULL LIMIT {$startingLimit}, {$this->itemsPerPage}";
     } else {
       $this->query = "SELECT *
-            FROM ";
+            FROM (";
 
       if (count($types) == 1) {
         // if there is only 1 type to be filtered
-        $this->query .= "products
+        $this->query .= "products)
                         JOIN product_type USING(name)
                         JOIN TYPES USING(type)
                         WHERE TYPES.type = '{$types[0]}' AND sale IS NULL 
@@ -54,7 +73,7 @@ class Paginator
         // if there are more than 1 type being filtered
         for ($i = 0; $i < count($types); $i++) {
           if ($i + 1 != count($types)) {
-            $this->query .= "((
+            $this->query .= "(
                 SELECT *
                 FROM products
                 JOIN product_type USING(name)
@@ -94,4 +113,14 @@ class Paginator
   {
     return $this->pages;
   }
+
+  /**
+   * @return string
+   */
+  public function getQuery(): string
+  {
+    return $this->query;
+  }
+
+
 }

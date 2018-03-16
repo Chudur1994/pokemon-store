@@ -6,7 +6,7 @@ class Pokemon extends Item implements JsonSerializable
 {
   private $name = "";
   private $description = "";
-  private $type = [];
+  private $type = "";
 
   /**
    * @return string
@@ -41,17 +41,17 @@ class Pokemon extends Item implements JsonSerializable
   }
 
   /**
-   * @return array
+   * @return string
    */
-  public function getType(): array
+  public function getType(): string
   {
     return $this->type;
   }
 
   /**
-   * @param array $type
+   * @param string $type
    */
-  public function setType(array $type): void
+  public function setType(string $type): void
   {
     $this->type = $type;
   }

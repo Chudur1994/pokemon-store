@@ -24,7 +24,8 @@ class components
           <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
           <script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
           <title>{$data['title']}</title>
-        </head>";
+        </head>
+          <body>";
   }
 
   function footer(array $data)
@@ -160,5 +161,88 @@ class components
               <img class='empty' src='./assets/img/gen1/Magikarp.gif'>
               <h5 class='blue-text'>{$text}</h5>
             </div>";
+  }
+
+  function inventoryItem($item)
+  {
+    $inventoryItem = "<tr>
+              <td width='10%'>{$item->getName()}</td>
+              <td width='10%'>
+                <img style='max-width: 4rem' src='./assets/img/gen1/{$item->getImage()}'>
+              </td>
+              <td>{$item->getDescription()}</td>";
+
+    $types = "";
+    $typesArr = explode(",", $item->getType());
+
+    foreach ($typesArr as $type) {
+      $bgColor = "background-color: " . TYPES[$type];
+      $types .= "<div style='$bgColor' class='type white-text'>
+                  $type
+                </div>";
+    }
+
+    $inventoryItem .= "<td width='9%' class='center'>{$types}</td>
+                        <td width='10%' class='price center' >$ {$item->getPrice()}</td>
+                        <td width='5%' class='quantity center'>{$item->getQuantity()}</td>
+                        <td width=5%>
+                          <a class='btn blue'>Edit</a>
+                        </td>
+                      </tr>";
+
+    return $inventoryItem;
+  }
+
+  function catalogItem($item)
+  {
+    $encodedItem = json_encode($item);
+
+    // item infos
+    $name = $item->getName();
+    $image = $item->getImage();
+    $desc = $item->getDescription();
+
+    return "<div class='col s3 left-align'>
+              <div class='card sticky-action'>
+                <div class='card-image waves-effect waves-block waves-light'>
+                  <img class='activator' src='./assets/img/gen1/{$image}'>
+                </div>
+                <div class='card-content'>
+                    <span class='card-title activator grey-text text-darken-4'>
+                      {$name} <i class='material-icons right'>more_vert</i>
+                    </span>
+                </div>
+                <div class='card-action'>
+                  {$this->addToCart($encodedItem)}
+                </div>
+                <div class='card-reveal'>
+                    <span class='item-name card-title grey-text text-darken-4'>
+                      {$name} <i class='material-icons right'>close</i>
+                    </span>
+                  <p>{$desc}</p>
+                </div>
+              </div>
+            </div>";
+  }
+
+  public function pagination($currentPage, $pages)
+  {
+    $pagination = "";
+
+    // PREVIOUS ARROW
+    $isDisabled = $currentPage == 1 ? ["li_link" => "disabled", "a_link" => "#!"] : ["li_link" => "waves-effect", "a_link" => "previous_link"];
+    $pagination .= $this->paginationNavLink($isDisabled, "chevron_left");
+
+    // LINKS
+    for ($page = 1; $page <= $pages; $page++) {
+      $isActive = $currentPage == $page ? "active" : "";
+      $pagination .= $this->paginationLink($page, $isActive);
+    }
+
+    // NEXT ARROW
+    $isDisabled = $currentPage == $pages ? ["li_link" => "disabled", "a_link" => "#!"] : ["li_link" => "waves-effect", "a_link" => "next_link"];
+    $pagination .= $this->paginationNavLink($isDisabled, "chevron_right");
+
+    return $pagination;
   }
 }

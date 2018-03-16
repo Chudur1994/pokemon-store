@@ -146,11 +146,26 @@ footer {
     width: 100%;
 }
 
+.cart-item {
+    position: relative;
+}
+
 .cart-item p:nth-child(2),
 .cart-item p:nth-child(3) {
     font-family: 'Roboto', sans-serif;
 }
 
 .pagination {
+    font-family: 'Roboto', sans-serif;
+}
+
+#inventory .type {
+    border-radius: 15px !important;
+    margin-bottom: .3rem;
+    font-size: .8rem;
+    border-bottom: 2px solid rgba(100, 100, 100, .7) !important;
+}
+
+#inventory .price, #inventory .quantity {
     font-family: 'Roboto', sans-serif;
 }

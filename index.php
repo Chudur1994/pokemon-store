@@ -93,7 +93,7 @@ $components->header(["title" => SITENAME]);
 
           <div class="col s12">
             <div class="divider"></div>
-            <ul class="pagination number">
+            <ul id="catalog-pagination" class="pagination number">
               <!-- PAGINATION -->
             </ul>
           </div>
