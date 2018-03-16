@@ -5,6 +5,7 @@ require_once "Pokemon.php";
 class Paginator
 {
   private $db;
+  private $pdo;
   private $query = "";
   private $pages = 0;
   private $count = 0;
@@ -12,18 +13,18 @@ class Paginator
 
   /**
    * Paginator constructor.
-   * @param $connection
    * @param $query - should use the count(*) MySql method to count rows
    * @param int $itemsPerPage
    */
-  public function __construct($connection, string $query, $itemsPerPage = 8)
+  public function __construct(string $query, $itemsPerPage = 8)
   {
-    $this->db = $connection;
+    $this->db = DB::getInstance();
+    $this->pdo = $this->db->getConnection();
     $this->query = $query;
     $this->itemsPerPage = $itemsPerPage;
 
     // get the number of rows
-    $this->count = $this->db->query($this->query)->fetchColumn();
+    $this->count = $this->pdo->query($this->query)->fetchColumn();
     $this->pages = ceil($this->count / $this->itemsPerPage);
   }
 
@@ -34,32 +35,51 @@ class Paginator
    */
   public function getResults(int $currentPage, array $types = [])
   {
-    if (empty($types)) {
-      $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
+    $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
 
+    if (empty($types)) {
       $this->query = "SELECT * FROM products WHERE sale IS NULL LIMIT {$startingLimit}, {$this->itemsPerPage}";
     } else {
-      $startingLimit = ($currentPage - 1) * $this->itemsPerPage;
+      $this->query = "SELECT *
+            FROM ";
 
-      $this->query = "SELECT products.*
-                    FROM products 
-                    JOIN product_type ON product_type.name = products.name 
-                    JOIN types ON types.type = product_type.type 
-                    WHERE ";
-
-      for ($i = 0; $i < count($types); $i++) {
-        if ($i + 1 == count($types)) {
-          $this->query .= "product_type.type='{$types[$i]}' AND (sale IS NULL) ";
-        } else {
-          $this->query .= "product_type.type='{$types[$i]}' AND ";
+      if (count($types) == 1) {
+        // if there is only 1 type to be filtered
+        $this->query .= "products
+                        JOIN product_type USING(name)
+                        JOIN TYPES USING(type)
+                        WHERE TYPES.type = '{$types[0]}' AND sale IS NULL 
+                        LIMIT {$startingLimit}, {$this->itemsPerPage}";
+      } else {
+        // if there are more than 1 type being filtered
+        for ($i = 0; $i < count($types); $i++) {
+          if ($i + 1 != count($types)) {
+            $this->query .= "((
+                SELECT *
+                FROM products
+                JOIN product_type USING(name)
+                JOIN TYPES USING(type)
+                WHERE TYPES.type = '{$types[$i]}' AND sale IS NULL
+              ) UNION ";
+          } else {
+            // if last item in the list of filtered items
+            $this->query .= "(
+                SELECT *
+                FROM products
+                JOIN product_type USING(name)
+                JOIN TYPES USING(type)
+                WHERE TYPES.type = '{$types[$i]}' AND sale IS NULL
+             )) result 
+                GROUP BY name
+                HAVING
+                  COUNT(result.name) > 1
+                LIMIT {$startingLimit}, {$this->itemsPerPage}";
+          }
         }
       }
-
-      $this->query .= "LIMIT {$startingLimit}, {$this->itemsPerPage}";
     }
-
     try {
-      $results = $this->db->query($this->query)->fetchAll(PDO::FETCH_CLASS, 'Pokemon');
+      $results = $this->pdo->query($this->query)->fetchAll(PDO::FETCH_CLASS, 'Pokemon');
       return $results;
     } catch (PDOException $e) {
       echo $e->getMessage();

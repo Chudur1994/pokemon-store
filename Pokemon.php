@@ -2,13 +2,11 @@
 
 require_once "Item.php";
 
-class Pokemon extends Item
+class Pokemon extends Item implements JsonSerializable
 {
   private $name = "";
   private $description = "";
   private $type = [];
-  private $stats = [];
-  private $moves = [];
 
   /**
    * @return string
@@ -59,36 +57,18 @@ class Pokemon extends Item
   }
 
   /**
-   * @return array
+   * Specify data which should be serialized to JSON
    */
-  public function getStats(): array
+  public function jsonSerialize()
   {
-    return $this->stats;
+    return array(
+      'price' => $this->price,
+      'quantity' => $this->quantity,
+      'name' => $this->name,
+      'sale' => $this->sale,
+      'image' => $this->image,
+      'types' => $this->type,
+      'description' => $this->description
+    );
   }
-
-  /**
-   * @param array $stats
-   */
-  public function setStats(array $stats): void
-  {
-    $this->stats = $stats;
-  }
-
-  /**
-   * @return array
-   */
-  public function getMoves(): array
-  {
-    return $this->moves;
-  }
-
-  /**
-   * @param array $moves
-   */
-  public function setMoves(array $moves): void
-  {
-    $this->moves = $moves;
-  }
-
-
 }

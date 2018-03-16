@@ -1,11 +1,21 @@
 <?php
 
+require_once "DB.php";
+
 abstract class Item
 {
   protected $price = 0.0;
   protected $quantity = 0;
   protected $sale = 0.0;
   protected $image = "";
+  protected $db;
+  protected $pdo;
+
+  public function __construct()
+  {
+    $this->db = DB::getInstance();
+    $this->pdo = $this->db->getConnection();
+  }
 
   /**
    * @return float

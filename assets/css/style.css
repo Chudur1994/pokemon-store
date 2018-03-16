@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Raleway', sans-serif;
 }
 
 main {
@@ -19,10 +20,6 @@ main {
 
 .brand-logo img {
     margin-top: 14px;
-}
-
-nav {
-    font-family: 'Raleway', sans-serif;
 }
 
 .card-image {
@@ -75,15 +72,7 @@ nav {
     font-size: .7rem;
 }
 
-.confirm > div {
-    position: fixed;
-    border: 2px solid rgb(200, 200, 200);
-    border-radius: 5px;
-    padding: 1rem;
-    background-color: white;
-}
-
-.confirm a {
+#cartConfirm a {
     width: 100%;
 }
 
@@ -110,7 +99,58 @@ footer {
     display: inline;
 }
 
-.sale-info {
-    display: inline-block;
-    height: 15rem !important;
+#sale-info > div.card-panel {
+    height: 25rem !important;
+    position: relative !important;
+}
+
+#sale-add-to-cart > a {
+    width: 90%;
+    position: absolute !important;
+    bottom: 1rem !important;
+}
+
+.add-new-item-btn {
+    width: 100%;
+}
+
+.filter-type {
+    border-bottom: 2px solid rgba(100, 100, 100, .7) !important;
+    position: relative !important;
+    bottom: 3px !important;
+}
+
+#filter-chips {
+    margin-top: 1rem;
+}
+
+#search {
+    padding-left: 1rem;
+    width: 95%;
+}
+
+.input-field input[type=search]:focus {
+    border-bottom: 1px solid #ffd924 !important;
+    box-shadow: 0 1px 0 0 #ffd924 !important
+}
+
+.empty {
+    width: 7rem;
+}
+
+.confirm-purchase h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.confirm-purchase a {
+    width: 100%;
+}
+
+.cart-item p:nth-child(2),
+.cart-item p:nth-child(3) {
+    font-family: 'Roboto', sans-serif;
+}
+
+.pagination {
+    font-family: 'Roboto', sans-serif;
 }
